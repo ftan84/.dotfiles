@@ -1,0 +1,11 @@
+- name: Create fish config directory
+  file:
+    path: /root/.config/fish
+    state: directory
+
+- name: Create fish symlinks
+  file:
+    src: "{{ ansible_env.PWD }}/roles/fish/files/.fishrc"
+    path: "/root/.config/fish/.fishrc"
+    state: link
+    force: yes
