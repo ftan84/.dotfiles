@@ -6,6 +6,6 @@
 - name: Create fish symlinks
   file:
     src: "{{ ansible_env.PWD }}/roles/fish/files/.fishrc"
-    path: "/root/.config/fish/.fishrc"
+    path: "~/.config/fish/.fishrc"
     state: link
     force: yes

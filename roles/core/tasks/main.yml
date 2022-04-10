@@ -15,3 +15,10 @@
       - xzdec
       - libopenblas-dev
     state: present
+
+- name: Create .bashrc symlink
+  file:
+    src: "{{ ansible_env.PWD }}/roles/core/files/.bashrc"
+    path: "~/.bashrc"
+    state: link
+    force: yes
