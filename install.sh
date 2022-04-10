@@ -18,7 +18,7 @@ add-apt-repository --yes --update ppa:ansible/ansible
 apt install -y ansible
 
 # Runs Ansible playbook using our user.
-# ansible-playbook -i "$HOSTS" "$PLAYBOOK" --ask-become-pass
+ansible-playbook -i "$HOSTS" "$PLAYBOOK" --ask-become-pass
 
 exit 0
 
