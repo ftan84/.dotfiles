@@ -1,0 +1,17 @@
+- name: Installs common os stuff
+  become: yes
+  become_user: root
+  package:
+    name:
+      - git-flow
+      - htop
+      - tree
+      - build-essential
+      - cmake
+      - acpi
+      - libssl-dev
+      - libcurl4-gnutls-dev
+      - lmodern
+      - xzdec
+      - libopenblas-dev
+    state: present

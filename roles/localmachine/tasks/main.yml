@@ -1,0 +1,13 @@
+- name: Installs tools that I like to keep in my main dev box
+  become: yes
+  become_user: root
+  package:
+    name:
+      - exa
+      - gnome-tweaks
+      - neofetch
+      - pandoc
+      - pandoc-citeproc
+      - texlive
+      - texlive-latex-extra
+    state: present
