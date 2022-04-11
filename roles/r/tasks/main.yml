@@ -1,6 +1,0 @@
-- name: Apt install r-base
-  become: yes
-  become_user: root
-  apt:
-    name: r-base
-    state: present
