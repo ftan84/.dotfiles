@@ -14,6 +14,7 @@
       - lmodern
       - xzdec
       - libopenblas-dev
+      - curl
     state: present
 
 - name: Create .bashrc symlink

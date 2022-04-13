@@ -10,4 +10,34 @@
       - pandoc-citeproc
       - texlive
       - texlive-latex-extra
+      - docker.io
     state: present
+
+      # - name: Install Docker Dependency
+      #   become: yes
+      #   become_user: root
+      #   package:
+      #     name:
+      #       - apt-transport-https
+      #       - ca-certificates
+      #       - gnupg-agent
+      #       - softare-properties-common
+      # 
+      # - name: Add Docker GPG key
+      #   apt_key:
+      #     url: https://download.docker.com/linux/ubuntu/gpg
+      #     state: present
+      # 
+      # - name: Add docker repository
+      #   apt_repository:
+      #     repo: deb https://download.docker.com/linux/ubuntu
+
+- name: Create .fonts folder
+  file: 
+    path: ~/.fonts
+    state: directory
+
+- name: Download FiraCode Sans Nerd Font
+  get_url:
+    url: https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete.ttf
+    dest: ~/.fonts/FiraCodeRegularNerdFont.ttf

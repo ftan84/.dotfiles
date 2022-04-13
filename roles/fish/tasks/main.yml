@@ -1,6 +1,6 @@
 - name: Create fish config directory
   file:
-    path: /root/.config/fish
+    path: ~/.config/fish
     state: directory
 
 - name: Create fish symlinks

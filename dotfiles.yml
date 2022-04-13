@@ -1,6 +1,6 @@
 - name: Set up local workstation
   hosts: local
   roles:
-    # - core
-    # - localmachine
+    - core
+    - localmachine
     - fish
