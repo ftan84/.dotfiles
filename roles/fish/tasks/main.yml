@@ -44,3 +44,9 @@
     path: "~/.config/fish/functions/fish_user_key_bindings.fish"
     state: link
     force: yes
+
+- name: Install fisher
+  command: fish -c 'curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher'
+
+- name: Install tide
+  command: fish -c 'fisher install IlanCosman/tide@v5'
