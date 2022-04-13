@@ -3,9 +3,49 @@
     path: ~/.config/fish
     state: directory
 
-- name: Create fish symlinks
+- name: Create fish/functions config directory
   file:
-    src: "{{ ansible_env.PWD }}/roles/fish/files/.fishrc"
-    path: "~/.config/fish/.fishrc"
+    path: ~/.config/fish/functions
+    state: directory
+
+- name: Add fish repo
+  apt_repository:
+    repo: 'ppa:fish-shell/release-3'
+
+- name: apt update
+  become: true
+  become_user: root
+  apt:
+    update_cache: yes
+
+- name: install fish
+  become: yes
+  become_user: root
+  package:
+    name: fish
+    state: present
+
+- name: Change default shell to fish
+  become: no
+  vars:
+    current_user: "{{ ansible_user_id }}"
+  tasks:
+    - name: Change shell
+      become: yes
+      user:
+        name: "{{ current_user }}"
+        shell: /usr/bin/fish
+
+- name: Create fish config symlinks
+  file:
+    src: "{{ ansible_env.PWD }}/roles/fish/files/config.fish"
+    path: "~/.config/fish/config.fish"
+    state: link
+    force: yes
+
+- name: Create fish user keybindigns symlinks
+  file:
+    src: "{{ ansible_env.PWD }}/roles/fish/files/functions/fish_user_key_bindings.fish"
+    path: "~/.config/fish/functions/fish_user_key_bindings.fish"
     state: link
     force: yes
