@@ -3,5 +3,5 @@
   roles:
     - core
     - localmachine
-    - alacritty
+      #- alacritty
     - fish
