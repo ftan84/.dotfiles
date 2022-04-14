@@ -15,6 +15,7 @@
       - xzdec
       - libopenblas-dev
       - curl
+      - software-properties-common
     state: present
 
 - name: Create .bashrc symlink
