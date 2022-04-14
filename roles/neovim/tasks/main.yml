@@ -14,13 +14,21 @@
   package:
     name:
       - neovim
-      - python-dev
-      - python-pip
-      - python3-dev
-      - python3-pip
+        # - python-dev
+        # - python-pip
+        # - python3-dev
+        # - python3-pip
     state: present
 
 - name: Install Spacevim
   become: yes
   become_user: root
-  command: curl -sLf https://spacevim.org/install.sh | bash
+  command: 'curl -sLf https://spacevim.org/install.sh | bash'
+
+- name: Get Spacevim Install Script
+  get_url:
+    url: https://spacevim.org/install.sh
+    dest: /tmp/install.sh
+
+- name: Install Spacevim
+  command: bash /tmp/install.sh
