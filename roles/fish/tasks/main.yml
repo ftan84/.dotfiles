@@ -9,14 +9,14 @@
     state: directory
 
 - name: Add fish repo
-    apt_repository:
-      repo: 'ppa:fish-shell/release-3'
+  apt_repository:
+    repo: 'ppa:fish-shell/release-3'
 
 - name: apt update
   become: yes
   become_user: root
-    apt:
-      update_cache: yes
+  apt:
+    update_cache: yes
 
 - name: install fish
   become: yes
