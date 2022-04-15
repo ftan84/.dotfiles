@@ -33,14 +33,16 @@
 
 - name: Create fish config symlinks
   file:
-    src: "{{ ansible_env.PWD }}/roles/fish/files/config.fish"
+    # src: "{{ ansible_env.PWD }}/roles/fish/files/config.fish"
+    src: "~/.dotfiles/roles/fish/files/config.fish"
     path: "~/.config/fish/config.fish"
     state: link
     force: yes
 
 - name: Create fish user keybindigns symlinks
   file:
-    src: "{{ ansible_env.PWD }}/roles/fish/files/functions/fish_user_key_bindings.fish"
+    # src: "{{ ansible_env.PWD }}/roles/fish/files/functions/fish_user_key_bindings.fish"
+    src: "~/.dotfiles/roles/fish/files/functions/fish_user_key_bindings.fish"
     path: "~/.config/fish/functions/fish_user_key_bindings.fish"
     state: link
     force: yes

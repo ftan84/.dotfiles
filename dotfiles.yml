@@ -1,8 +1,9 @@
-- name: Set up local workstation
-  hosts: local
+- name: Set up workstation
+  # hosts: local
+  hosts: cont
   roles:
-    #- core
-    #- localmachine
-    #- alacritty
-    #- fish
+    - core
+    - localmachine
+    - alacritty
+    - fish
     - neovim

@@ -32,7 +32,8 @@
 
 - name: Symlink Spacevim config
   file:
-    src: "{{ ansible_env.PWD }}/roles/neovim/files/init.toml"
+    # src: "{{ ansible_env.PWD }}/roles/neovim/files/init.toml"
+    src: "~/.dotfiles/roles/neovim/files/init.toml"
     path: "~/.SpaceVim.d/init.toml"
     state: link
     force: yes

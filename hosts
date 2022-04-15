@@ -1,6 +1,10 @@
 # file: hosts
 [local]
 localhost
-
 [local:vars]
 ansible_connection=local
+
+[cont]
+mydevbox
+[cont:vars]
+ansible_connection=docker

@@ -3,6 +3,8 @@
   become_user: root
   package:
     name:
+      - git
+      - sudo
       - git-flow
       - htop
       - tree
@@ -18,9 +20,17 @@
       - software-properties-common
     state: present
 
+- name: Clone my dotfiles
+  git:
+    repo: https://github.com/ftan84/.dotfiles
+    dest: ~/.dotfiles
+    clone: yes
+    update: yes
+
 - name: Create .bashrc symlink
   file:
-    src: "{{ ansible_env.PWD }}/roles/core/files/.bashrc"
+    # src: "{{ ansible_env.PWD }}/roles/core/files/.bashrc"
+    src: "~/.dotfiles/roles/core/files/.bashrc"
     path: "~/.bashrc"
     state: link
     force: yes
