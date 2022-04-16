@@ -1,0 +1,14 @@
+- name: Deploy Docker Container
+  hosts: local
+  roles:
+    - docker-deploy
+
+- name: Set up workstation
+  # hosts: local
+  hosts: cont
+  roles:
+    - core
+    - localmachine
+    - alacritty
+    - fish
+    - neovim

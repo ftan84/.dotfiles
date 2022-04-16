@@ -1,0 +1,14 @@
+- name: Spin up an Ubuntu Docker container locally
+  docker_container:
+    image: ubuntu:impish
+    name: mydevbox
+    state: present
+    detach: yes
+    command: apt update && apt upgrade && apt install git sudo python3
+      # auto_remove: true
+      
+- name: Start Docker Container
+  docker_container:
+    name: mydevbox
+    state: started
+    detach: yes
