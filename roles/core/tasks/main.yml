@@ -18,6 +18,7 @@
       - libopenblas-dev
       - curl
       - software-properties-common
+      - acpi
     state: present
 
 - name: Clone my dotfiles
