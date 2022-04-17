@@ -5,3 +5,7 @@
 
 - name: Installing Lunarvim
   command: bash /tmp/install.sh
+  responses:
+    - n
+    - n
+    - n
