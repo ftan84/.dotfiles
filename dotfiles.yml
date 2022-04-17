@@ -4,6 +4,6 @@
   roles:
     - core
     - localmachine
-    - alacritty
+      # - alacritty
     - fish
     - neovim
