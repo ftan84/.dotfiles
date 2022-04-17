@@ -1,0 +1,7 @@
+- name: Downloading Lunarvim
+  get_url:
+    url: https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh
+    dest: /tmp/install.sh
+
+- name: Installing Lunarvim
+  command: bash /tmp/install.sh
