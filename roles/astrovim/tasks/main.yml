@@ -1,24 +1,3 @@
-- name: Create Spacevim folder
-  file:
-    path: ~/.SpaceVim.d/
-    state: directory
-
-- name: Symlink Spacevim config
-  file:
-    # src: "{{ ansible_env.PWD }}/roles/neovim/files/init.toml"
-    src: "~/.dotfiles/roles/spacevim/files/init.toml"
-    path: "~/.SpaceVim.d/init.toml"
-    state: link
-    force: yes
-
-- name: Get Spacevim Install Script
-  get_url:
-    url: https://spacevim.org/install.sh
-    dest: /tmp/install.sh
-
-- name: Install Spacevim
-  command: bash /tmp/install.sh
-
 - name: Move nvim file as backup
   command: mv ~/.config/nvim ~/.config/nvimbackup
 
