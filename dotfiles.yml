@@ -3,7 +3,7 @@
   hosts: cont
   roles:
     - core
-    - localmachine
+      # - localmachine
       # - alacritty
     - fish
     - neovim
