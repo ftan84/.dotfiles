@@ -5,7 +5,6 @@
     name:
       - exa
       - gnome-tweaks
-      - neofetch
       - pandoc
       - pandoc-citeproc
       - texlive

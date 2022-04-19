@@ -20,6 +20,7 @@
       - software-properties-common
       - acpi
       - python3-pip
+      - neofetch
     state: present
 
 - name: Clone my dotfiles
