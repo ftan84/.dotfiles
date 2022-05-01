@@ -21,6 +21,7 @@
       - acpi
       - python3-pip
       - neofetch
+      - tmux
     state: present
 
 - name: Create .bashrc symlink
