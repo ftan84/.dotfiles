@@ -1,0 +1,5 @@
+- name: Create tmux conf symlink
+  src: ~/.dotfiles/roles/tmux/files/.tmux.conf
+  path: ~/.tmux.conf
+  state: link
+  force: yes

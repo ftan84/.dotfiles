@@ -5,6 +5,7 @@
     - core
     - localmachine
     - alacritty
+    - tmux
     - fish
     - neovim
     - lunarvim
