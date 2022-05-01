@@ -1,10 +1,10 @@
 - name: Set up workstation
-  # hosts: local
-  hosts: cont
+  hosts: local
+  # hosts: cont
   roles:
     - core
-      # - localmachine
-      # - alacritty
+    - localmachine
+    - alacritty
     - fish
     - neovim
     - lunarvim
