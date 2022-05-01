@@ -9,6 +9,7 @@
     state: directory
 
 - name: Add fish repo
+  become: yes
   apt_repository:
     repo: 'ppa:fish-shell/release-3'
 
