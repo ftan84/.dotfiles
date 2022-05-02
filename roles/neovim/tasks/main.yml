@@ -26,5 +26,6 @@
     dest: /tmp/nvim-linux64.deb
 
 - name: Install neovim
+  become: yes
   apt:
     deb: /tmp/nvim-linux64.deb
