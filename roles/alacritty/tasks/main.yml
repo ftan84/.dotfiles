@@ -1,0 +1,12 @@
+- name: Install alacritty
+  become: yes
+  package:
+    name: alacritty
+    state: present
+
+- name: Create alacritty conf symlink
+  file:
+    src: "~/.dotfiles/roles/alacritty/files/alacritty.yml"
+    path: "~/.config/alacritty/alacritty.yml"
+    state: link
+    force: yes

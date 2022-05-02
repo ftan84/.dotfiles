@@ -1,3 +1,9 @@
+- name: Install tmux
+  become: yes
+  package:
+    name: tmux
+    state: present
+
 - name: Create tmux conf symlink
   file:
     src: "~/.dotfiles/roles/tmux/files/.tmux.conf"
