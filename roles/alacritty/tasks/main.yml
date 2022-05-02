@@ -9,6 +9,11 @@
     name: alacritty
     state: present
 
+- name: Create alacritty config directory
+  file:
+    path: ~/.config/alacritty
+    state: directory
+
 - name: Create alacritty conf symlink
   file:
     src: "~/.dotfiles/roles/alacritty/files/alacritty.yml"
