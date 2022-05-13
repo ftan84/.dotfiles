@@ -1,7 +1,8 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+and not set -q TMUX
+  # Commands to run in interactive sessions can go here
+  exec tmux
 end
 
 # neofetch
-tmux
 alias ll "exa -alh --icons"
