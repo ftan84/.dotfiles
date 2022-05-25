@@ -145,6 +145,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- Additional Plugins
 lvim.plugins = {
   { "ellisonleao/gruvbox.nvim" },
+  { "junegunn/vim-easy-align" },
   {
     "tpope/vim-fugitive",
     cmd = {
