@@ -4,6 +4,7 @@
   package:
     name:
       - exa
+      - cmatrix
       - gnome-tweaks
       - pandoc
       - pandoc-citeproc
