@@ -147,25 +147,25 @@ lvim.plugins = {
   { "ellisonleao/gruvbox.nvim" },
   { "junegunn/vim-easy-align" },
   { "tpope/vim-surround" },
-  {
-    "tpope/vim-fugitive",
-    cmd = {
-      "G",
-      "Git",
-      "Gdiffsplit",
-      "Gread",
-      "Gwrite",
-      "Ggrep",
-      "GMove",
-      "GDelete",
-      "GBrowse",
-      "GRemove",
-      "GRename",
-      "Glgrep",
-      "Gedit"
-    },
-    ft = { "fugitive" }
-  },
+  -- {
+  --   "tpope/vim-fugitive",
+  --   cmd = {
+  --     "G",
+  --     "Git",
+  --     "Gdiffsplit",
+  --     "Gread",
+  --     "Gwrite",
+  --     "Ggrep",
+  --     "GMove",
+  --     "GDelete",
+  --     "GBrowse",
+  --     "GRemove",
+  --     "GRename",
+  --     "Glgrep",
+  --     "Gedit"
+  --   },
+  --   ft = { "fugitive" }
+  -- },
   { "lukas-reineke/indent-blankline.nvim" },
   {
     "iamcco/markdown-preview.nvim",
@@ -194,6 +194,7 @@ lvim.plugins = {
       })
     end
   },
+  { "kdheepak/lazygit.nvim" }
   --     {"folke/tokyonight.nvim"},
   --     {
   --       "folke/trouble.nvim",
