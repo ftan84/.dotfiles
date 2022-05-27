@@ -4,5 +4,6 @@ and not set -q TMUX
   exec tmux
 end
 
-# neofetch
+neofetch
 alias ll "exa -alh --icons"
+alias pse "powershell.exe"
