@@ -1,5 +1,11 @@
 - name: Install core packages
   community.general.pacman:
-    name: input-remapper-git
+    name:
+      - input-remapper-git
+      - nerd-fonts-fira-code
+      - neovim
+      - gitflow-avh
+      - tree
+      - python-pip
     state: present
     executable: yay

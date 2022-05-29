@@ -1,0 +1,16 @@
+- name: Install alacritty
+  community.general.pacman:
+    name: alacritty
+    state: present
+
+- name: Create alacritty config directory
+  file:
+    path: ~/.config/alacritty
+    state: directory
+
+- name: Symlink alacritty config
+  file:
+    src: "~/.dotfiles/roles/alacritty/files/alacritty.yml"
+    path: "~/.config/alacritty/alacritty.yml"
+    state: link
+    force: yes
