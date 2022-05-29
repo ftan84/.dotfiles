@@ -1,0 +1,5 @@
+- name: Install core packages
+  community.general.pacman:
+    name: input-remapper-git
+    state: present
+    executable: yay
