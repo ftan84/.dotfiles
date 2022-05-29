@@ -14,6 +14,7 @@ PLAYBOOK="$ROOTDIR/dotfiles.yml"
 if hash pacman 2>/dev/null; then
 	# Arch based distro
 	echo "Setting up Arch based machine"
+	ansible-galaxy collection install kewlfft.aur
 	sudo pacman -Syu
 	sudo pacman -S ansible
 	PLAYBOOK="$ROOTDIR/yay-dotfiles.yml"
