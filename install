@@ -11,11 +11,22 @@ HOSTS="$ROOTDIR/hosts"
 # Main playbook
 PLAYBOOK="$ROOTDIR/dotfiles.yml"
 
-# Installs ansible
-sudo apt update
-sudo apt install -y software-properties-common
-sudo add-apt-repository --yes --update ppa:ansible/ansible
-sudo apt install -y ansible
+if hash pacman 2>/dev/null; then
+	# Arch based distro
+	echo "Setting up Arch based machine"
+	sudo pacman -Syu
+	sudo pacman -S ansible
+	PLAYBOOK="$ROOTDIR/dotfiles.yml"
+elif hash apt 2>/dev/null; then
+	# Debian based distro
+	echo "Setting up Debian based machine"
+	sudo apt update
+	sudo apt install -y software-properties-common
+	sudo add-apt-repository --yes --update ppa:ansible/ansible
+	sudo apt install -y ansible
+	PLAYBOOK="$ROOTDIR/dotfiles.yml"
+fi
+
 
 # Runs Ansible playbook using our user.
 ansible-playbook -i "$HOSTS" "$PLAYBOOK" --ask-become-pass
