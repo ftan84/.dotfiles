@@ -1,0 +1,6 @@
+- name: Create polybar symlink
+  file:
+    src: "~/.dotfiles/roles/yay-polybar/files/config.ini"
+    path: "~/.config/polybar/config.ini"
+    state: link
+    force: yes
