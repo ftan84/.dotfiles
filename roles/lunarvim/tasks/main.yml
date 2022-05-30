@@ -11,13 +11,6 @@
   file:
     path: ~/.config/lvim
     state: directory
-    
-- name: Create Lunarvim symlinks
-  file:
-    src: "~/.dotfiles/roles/lunarvim/files/config.lua"
-    path: "~/.config/lvim/config.lua"
-    state: link
-    force: yes
 
 - name: Installing Lunarvim
   expect:
@@ -29,6 +22,13 @@
       # 'Python dependencies': y
       # 'Rust': n
       'default: no': n
+
+- name: Create Lunarvim symlinks
+  file:
+    src: "~/.dotfiles/roles/lunarvim/files/config.lua"
+    path: "~/.config/lvim/config.lua"
+    state: link
+    force: yes
 
 - name: Adding lvim to Fish Path
   command: fish -c 'fish_add_path -m ~/.local/bin'
