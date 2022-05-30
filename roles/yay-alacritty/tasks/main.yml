@@ -1,7 +1,7 @@
 - name: Install alacritty
-  community.general.pacman:
+  kewlfft.aur.aur:
+    use: yay
     name: alacritty
-    state: present
 
 - name: Create alacritty config directory
   file:
