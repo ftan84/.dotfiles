@@ -1,0 +1,6 @@
+- name: Create sxhkd symlink
+  file:
+    src: "~/.dotfiles/roles/yay-sxhkd/files/sxhkdrc"
+    path: "~/.config/sxhkd/sxhkdrc"
+    state: link
+    force: yes
