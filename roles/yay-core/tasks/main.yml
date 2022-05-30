@@ -23,6 +23,11 @@
       - gitflow-avh
       - tree
       - python-pip
+      - lazygit
+      - exa
+      - cmatrix
+      - pandoc
+      - docker
 
         # - name: Install core packages
         #   community.general.pacman:

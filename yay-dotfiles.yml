@@ -4,3 +4,4 @@
   roles:
     - yay-core
     - yay-alacritty
+    - yay-polybar
