@@ -1,0 +1,42 @@
+- name: Create fish config directory
+  file:
+    path: ~/.config/fish
+    state: directory
+
+- name: Create fish/functions config directory
+  file:
+    path: ~/.config/fish/functions
+    state: directory
+
+- name: Install fish
+  kewlfft.aur.aur:
+    use: yay
+    name: fish
+
+- name: Change shell
+  become: yes
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /usr/bin/fish
+
+- name: Create fish config symlinks
+  file:
+    # src: "{{ ansible_env.PWD }}/roles/fish/files/config.fish"
+    src: "~/.dotfiles/roles/fish/files/config.fish"
+    path: "~/.config/fish/config.fish"
+    state: link
+    force: yes
+
+- name: Create fish user keybindigns symlinks
+  file:
+    # src: "{{ ansible_env.PWD }}/roles/fish/files/functions/fish_user_key_bindings.fish"
+    src: "~/.dotfiles/roles/fish/files/functions/fish_user_key_bindings.fish"
+    path: "~/.config/fish/functions/fish_user_key_bindings.fish"
+    state: link
+    force: yes
+
+- name: Install fisher
+  command: fish -c 'curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher'
+
+- name: Install tide
+  command: fish -c 'fisher install IlanCosman/tide@v5'
