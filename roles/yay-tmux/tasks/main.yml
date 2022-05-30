@@ -1,0 +1,11 @@
+- name: Install tmux
+  kewlfft.aur.aur:
+    use: yay
+    name: tmux
+
+- name: Create tmux conf symlink
+  file:
+    src: "~/.dotfiles/roles/tmux/files/.tmux.conf"
+    path: "~/.tmux.conf"
+    state: link
+    force: yes
