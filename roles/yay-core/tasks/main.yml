@@ -16,8 +16,7 @@
 - name: Install core packages
   kewlfft.aur.aur:
     use: yay
-    name: 
-      - input-remapper-git
+    name:
       - nerd-fonts-fira-code
       - neovim
       - gitflow-avh
