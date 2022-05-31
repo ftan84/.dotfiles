@@ -7,3 +7,6 @@ end
 neofetch
 alias ll "exa -alh --icons"
 alias pse "powershell.exe"
+
+setxkbmap -option ctrl:swapcaps
+setxkbmap -option altwin:swap_lalt_lwin
