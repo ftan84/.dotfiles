@@ -27,3 +27,4 @@
       - cmatrix
       - pandoc
       - docker
+    extra_args: "--noconfirm"
