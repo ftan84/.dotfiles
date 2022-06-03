@@ -1,0 +1,27 @@
+- name: Create bspw symlink
+  file:
+    src: "~/.dotfiles/roles/archrice-gruvbox/files/bspwm"
+    path: "~/.config/bspwm"
+    state: link
+    force: yes
+
+- name: Create picom symlink
+  file:
+    src: "~/.dotfiles/roles/archrice-gruvbox/files/picom"
+    path: "~/.config/picom"
+    state: link
+    force: yes
+
+- name: Create polybar symlink
+  file:
+    src: "~/.dotfiles/roles/archrice-gruvbox/files/polybar"
+    path: "~/.config/polybar"
+    state: link
+    force: yes
+
+- name: Create rofi symlink
+  file:
+    src: "~/.dotfiles/roles/archrice-gruvbox/files/rofi"
+    path: "~/.config/rofi"
+    state: link
+    force: yes
