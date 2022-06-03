@@ -1,3 +1,33 @@
+- name: Copy bspw directory
+  copy:
+    src: "~/.config/bspwm"
+    dest: "~/.config/bspwm-original"
+    
+- name: Remove bspw directory
+  file:
+    path: "~/.config/bspwm"
+    state: absent
+    
+- name: Copy polybar directory
+  copy:
+    src: "~/.config/polybar"
+    dest: "~/.config/polybar-original"
+    
+- name: Remove polybar directory
+  file:
+    path: "~/.config/polybar"
+    state: absent
+    
+- name: Copy rofi directory
+  copy:
+    src: "~/.config/rofi"
+    dest: "~/.config/rofi-original"
+    
+- name: Remove rofi directory
+  file:
+    path: "~/.config/rofi"
+    state: absent
+
 - name: Create bspw symlink
   file:
     src: "~/.dotfiles/roles/archrice-gruvbox/files/bspwm"
