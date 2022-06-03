@@ -17,7 +17,7 @@ if hash pacman 2>/dev/null; then
 	sudo pacman -Syu --noconfirm
 	sudo pacman -S ansible --noconfirm
 	ansible-galaxy collection install kewlfft.aur
-	PLAYBOOK="$ROOTDIR/yay-dotfiles.yml"
+	PLAYBOOK="$ROOTDIR/dotfiles_arch.yml"
 elif hash apt 2>/dev/null; then
 	# Debian based distro
 	echo "Setting up Debian based machine"
@@ -25,7 +25,7 @@ elif hash apt 2>/dev/null; then
 	sudo apt install -y software-properties-common
 	sudo add-apt-repository --yes --update ppa:ansible/ansible
 	sudo apt install -y ansible
-	PLAYBOOK="$ROOTDIR/dotfiles.yml"
+	PLAYBOOK="$ROOTDIR/dotfiles_ubuntu.yml"
 fi
 
 

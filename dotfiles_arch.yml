@@ -4,8 +4,7 @@
   roles:
     - yay-core
     - yay-alacritty
-    - yay-polybar
-    - yay-sxhkd
     - yay-fish
     - yay-tmux
     - lunarvim
+    - archrice-gruvbox
