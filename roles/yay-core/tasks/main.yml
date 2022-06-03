@@ -17,7 +17,7 @@
   kewlfft.aur.aur:
     use: yay
     name:
-      - nerd-fonts-fira-code
+      - nerd-fonts-complete
       - neovim
       - gitflow-avh
       - tree
