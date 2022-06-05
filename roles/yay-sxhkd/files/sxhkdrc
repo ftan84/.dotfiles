@@ -144,13 +144,13 @@ super + {Left,Down,Up,Right}
 
 # Multimedia keys
 XF86AudioRaiseVolume
-  #amixer -q set Master 5%+ unmute
   amixer -q set Master 1%+ unmute
+  # amixer -q set Master 1%+ unmute
 
 # Still multimedia
 XF86AudioLowerVolume
-  #amixer -q set Master 5%- unmute
   amixer -q set Master 1%- unmute
+  # amixer -q set Master 1%- unmute
 
 # still
 XF86AudioMute
