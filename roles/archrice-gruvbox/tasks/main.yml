@@ -28,6 +28,16 @@
     path: "~/.config/rofi"
     state: absent
 
+- name: Copy dunst directory
+  copy:
+    src: "~/.config/dunst"
+    dest: "~/.config/dunst-original"
+    
+- name: Remove dunst directory
+  file:
+    path: "~/.config/dunst"
+    state: absent
+
 - name: Create bspw symlink
   file:
     src: "~/.dotfiles/roles/archrice-gruvbox/files/bspwm"
@@ -53,5 +63,12 @@
   file:
     src: "~/.dotfiles/roles/archrice-gruvbox/files/rofi"
     path: "~/.config/rofi"
+    state: link
+    force: yes
+
+- name: Create dunst symlink
+  file:
+    src: "~/.dotfiles/roles/archrice-gruvbox/files/dunst"
+    path: "~/.config/dunst"
     state: link
     force: yes
